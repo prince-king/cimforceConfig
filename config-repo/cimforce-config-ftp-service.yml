@@ -2,6 +2,8 @@ server:
   eurekaPort: 8091
   clientPort: 8010
 spring:
+  application:
+    name: spring-cloud-ftp-server
   cloud:
     client:
       ipAddress: 10.1.1.133
