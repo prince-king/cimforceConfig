@@ -10,7 +10,7 @@ spring:
 eureka:  
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.ipAddress}:${server.clientPort}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     protocol: http
     hostname: ${spring.cloud.client.ipAddress}
   client:   
