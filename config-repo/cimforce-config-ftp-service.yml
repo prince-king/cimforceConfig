@@ -1,6 +1,6 @@
 server:
   eurekaPort: 8091
-  clientPort: 8010
+  port: 9100
 spring:
   application:
     name: spring-cloud-ftp-server
@@ -9,8 +9,8 @@ spring:
       ipAddress: 10.1.1.133
 eureka:  
   instance:
-#    prefer-ip-address: true
-#    instance-id: ${spring.cloud.client.ipAddress}:${server.clientPort}
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
     protocol: http
     hostname: ${spring.cloud.client.ipAddress}
   client:   
