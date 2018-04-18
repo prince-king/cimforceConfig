@@ -1,0 +1,16 @@
+server:
+  eurekaPort: 8091
+  clientPort: 8010
+spring:
+  cloud:
+    client:
+      ipAddress: 10.1.1.133
+eureka:  
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.apAddress}:${server.clientPort}
+  client:   
+    register-with-eureka: true
+    fetch-registry: true   
+    serviceUrl:
+      defaultZone: http://localhost:${server.eurekaPort}/eureka
