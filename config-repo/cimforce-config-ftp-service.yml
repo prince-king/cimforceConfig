@@ -4,9 +4,9 @@ server:
 spring:
   application:
     name: spring-cloud-ftp-server
-  cloud:
-    client:
-      ipAddress: 10.1.1.133
+#  cloud:
+#    client:
+#      ipAddress: 10.1.1.133
 eureka:  
   instance:
     prefer-ip-address: true
