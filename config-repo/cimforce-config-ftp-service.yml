@@ -17,4 +17,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true   
     serviceUrl:
-      defaultZone: ${eureka.instance.protocol}://${eureka.instance.hostname}:${server.eurekaPort}/eureka
+      defaultZone: ${eureka.instance.protocol}://${spring.cloud.client.ipAddress}:${server.eurekaPort}/eureka
