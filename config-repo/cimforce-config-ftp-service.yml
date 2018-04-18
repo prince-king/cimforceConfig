@@ -1,20 +1,20 @@
-#server:
-#  eurekaPort: 8091
-#  port: 9100
+server:
+  eurekaPort: 8091
+  port: 8010
 spring:
   application:
     name: spring-cloud-ftp-server
-#  cloud:
-#    client:
-#      ipAddress: 10.1.1.133
+  cloud:
+    client:
+      ipAddress: 10.1.1.133
 eureka:  
-#  instance:
-#    prefer-ip-address: true
-#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
-#    protocol: http
-#    hostname: ${spring.cloud.client.ipAddress}
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ipAddress}:${server.clientPort}
+    protocol: http
+    hostname: ${spring.cloud.client.ipAddress}
   client:   
     register-with-eureka: true
     fetch-registry: true   
     serviceUrl:
-      defaultZone: http://localhost:8091/eureka
+      defaultZone: ${eureka.instance.protocol}://${spring.cloud.client.ipAddress}:${server.port}/eureka
