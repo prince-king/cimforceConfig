@@ -8,7 +8,7 @@ spring:
 eureka:  
   instance:
     prefer-ip-address: true
-    instance-id: ${spring.cloud.client.apAddress}:${server.clientPort}
+    instance-id: ${spring.cloud.client.ipAddress}:${server.clientPort}
   client:   
     register-with-eureka: true
     fetch-registry: true   
