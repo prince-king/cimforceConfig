@@ -9,8 +9,10 @@ eureka:
   instance:
     prefer-ip-address: true
     instance-id: ${spring.cloud.client.ipAddress}:${server.clientPort}
+    protocol: http
+    hostname: localhost
   client:   
     register-with-eureka: true
     fetch-registry: true   
     serviceUrl:
-      defaultZone: http://localhost:${server.eurekaPort}/eureka
+      defaultZone: ${eureka.instance.protocol}://${eureka.instance.hostname}:${server.eurekaPort}/eureka
