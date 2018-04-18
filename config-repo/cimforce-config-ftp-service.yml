@@ -17,4 +17,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true   
     serviceUrl:
-      defaultZone: http://${spring.cloud.client.ipAddress}:${server.eurekaPort}/eureka
+      defaultZone: http://localhost:8091/eureka
